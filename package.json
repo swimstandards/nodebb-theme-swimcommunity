@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-theme-harmony",
-  "version": "2.1.15",
+  "name": "nodebb-theme-swimcommunity",
+  "version": "1.0.0",
   "nbbpm": {
     "compatibility": "^4.0.0"
   },
-  "description": "Harmony theme for NodeBB",
+  "description": "SwimCommunity theme for NodeBB",
   "main": "library.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony"
+    "url": "https://github.com/swimstandards/nodebb-theme-swimcommunity"
   },
   "scripts": {
     "lint": "eslint ."
@@ -22,6 +22,11 @@
   ],
   "contributors": [
     {
+      "name": "Adam Cai",
+      "email": "adam@swimstandards.comc",
+      "url": "https://github.com/swimstandards"
+    },
+    {
       "name": "Julian Lam",
       "email": "julian@nodebb.org",
       "url": "https://github.com/julianlam"
@@ -34,7 +39,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NodeBB/nodebb-theme-harmony/issues"
+    "url": "https://github.com/swimstandards/nodebb-theme-swimcommunity/issues"
   },
   "dependencies": {
     "@fontsource/inter": "5.0.15",
