@@ -1,0 +1,28 @@
+# Node modules (should not be committed)
+node_modules/
+
+# System/Editor files
+.DS_Store
+*.log
+*.swp
+*.swo
+*.tmp
+*.bak
+
+# OS-specific
+Thumbs.db
+
+# Git & build tools
+.git/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build artifacts (if using SCSS/LESS/JS build tools)
+build/
+dist/
+public/
+
+# Optional: Ignore .env or local config
+.env
+.env.local
