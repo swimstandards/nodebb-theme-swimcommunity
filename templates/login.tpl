@@ -11,7 +11,7 @@
 	<ul class="alt-logins list-unstyled mb-3">
 		{{{ each authentication }}}
 		<li class="{./name} mb-2">
-			<a class="btn btn-light border w-100 d-flex align-items-center" rel="nofollow noopener noreferrer" target="_top"
+			<a class="btn btn-dark w-100 d-flex align-items-center" rel="nofollow noopener noreferrer" target="_top"
 				href="{config.relative_path}{./url}">
 				{{{ if ./icons.svg }}}
 				{./icons.svg}
@@ -19,7 +19,7 @@
 				<i class="flex-shrink-0 {./icons.normal}" style="color:{./color};"></i>
 				{{{ end }}}
 				{{{ if ./labels.login }}}
-				<div class="flex-grow-1 text-body text-sm text-center">{./labels.login}</div>
+				<div class="flex-grow-1 text-center">{./labels.login}</div>
 				{{{ end }}}
 			</a>
 		</li>
@@ -86,7 +86,7 @@
 		{{{ if allowRegistration }}}
 		<hr />
 		<span class="text-sm">[[login:dont-have-account]]</span>
-		<a class="btn btn-outline-light text-body w-100" href="{config.relative_path}/register">[[register:register]]</a>
+		<a class="btn btn-outline-dark w-100" href="{config.relative_path}/register">[[register:register]]</a>
 		{{{ end }}}
 	</form>
 	{{{ end }}}
@@ -104,7 +104,7 @@
 			const params = new URLSearchParams(window.location.search);
 			if (params.has("returnTo")) {
 				if (typeof window !== "undefined" && window.sessionStorage) {
-					window.sessionStorage.setItem("redirectAfterLogin", "https://swimstandards.com/account");
+					window.sessionStorage.setItem("redirectAfterLogin", "https://swimstandards.com/account?from=login");
 				}
 			}
 		} catch (err) {
