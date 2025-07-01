@@ -20,6 +20,8 @@
 	{{{if useCustomCSS}}}
 	<style>{{customCSS}}</style>
 	{{{end}}}
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/baguettebox.js@1.11.1/dist/baguetteBox.min.css" />
+
 </head>
 
 <body class="{bodyClass} skin-{{{if bootswatchSkin}}}{bootswatchSkin}{{{else}}}noskin{{{end}}}">
