@@ -9,6 +9,6 @@
   },
   "eslint.format.enable": true,
   "files.associations": {
-    "*.tpl": "html"
+    "*.tpl": "django-html"
   }
 }
