@@ -2,18 +2,26 @@
 	// only using colors when there is no bootswatch skin applied
 	nav.sidebar, .bottombar-nav {
 		color: $secondary !important;
-		background-color: $light !important;
+		background-color: $white !important;
 	}
 	.bottombar-nav {
 		.dropdown-menu {
 			color: $secondary !important;
-			background-color: $light !important;
+			background-color: $white !important;
 		}
 	}
 }
 
 .sidebar {
 	$hover-color: mix($light, $dark, 90%);
+
+	#user-header-name {
+			max-width: 120px;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: middle;
+		}
 
 	@include media-breakpoint-up(lg) {
 		&.open {
