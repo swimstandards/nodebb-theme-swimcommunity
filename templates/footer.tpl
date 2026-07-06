@@ -1,9 +1,8 @@
 
 			</div><!-- /.container#content -->
 		</main>
-		<!-- IMPORT partials/sidebar-right.tpl -->
-	</div>
-	{{{ if !config.theme.topMobilebar }}}
+
+	</div>	</div><!-- /.container-lg -->	{{{ if !config.theme.topMobilebar }}}
 	<!-- IMPORT partials/mobile-footer.tpl -->
 	{{{ else }}}
 	<div class="fixed-bottom d-lg-none">
