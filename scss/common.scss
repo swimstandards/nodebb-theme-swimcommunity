@@ -62,16 +62,19 @@ hr {
 }
 
 blockquote {
-  $bq-border-color: mix($light, $dark, 75%);
-  @extend .text-bg-light;
+  color: var(--bs-body-color);
+  background-color: rgba(var(--bs-emphasis-color-rgb), 0.04);
   font-style: normal;
-  border-left: 2px solid $bq-border-color;
+  border-left: 2px solid var(--bs-border-color);
   padding: 1rem;
   p:last-child {
     margin-bottom: 0;
   }
+  a, strong, em, span, p, li {
+    color: inherit;
+  }
   .toggle {
-    border-color: $bq-border-color !important;
+    border-color: var(--bs-border-color) !important;
   }
 }
 
@@ -129,6 +132,8 @@ body:not(.page-user) {
 
 [component="chat/message/body"],
 [component="post/content"] {
+  color: var(--bs-body-color);
+
   .img-fluid {
     @extend .shadow-sm;
     padding: $spacer * 0.5;
@@ -138,6 +143,18 @@ body:not(.page-user) {
     border-radius: $border-radius-sm;
     max-height: 500px;
     width: auto;
+  }
+
+  p,
+  li,
+  span,
+  div,
+  td,
+  th,
+  strong,
+  em,
+  small {
+    color: inherit;
   }
 
   .table {
