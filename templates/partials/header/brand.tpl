@@ -17,7 +17,10 @@
 							title="[[global:header.brand-logo]]">
 							<img component="brand/logo"
 								alt="{{{ if brand:logo:alt }}}{brand:logo:alt}{{{ else }}}[[global:header.brand-logo]]{{{ end }}}"
-								class="{brand:logo:display}" src="{brand:logo}?{config.cache-buster}" />
+								class="{brand:logo:display} brand-logo brand-logo-light" src="{brand:logo}?{config.cache-buster}" />
+							<img
+								alt="{{{ if brand:logo:alt }}}{brand:logo:alt}{{{ else }}}[[global:header.brand-logo]]{{{ end }}}"
+								class="{brand:logo:display} brand-logo brand-logo-dark" src="/assets/uploads/system/site-logo-dark.png?{config.cache-buster}" />
 						</a>
 						{{{ end }}}
 

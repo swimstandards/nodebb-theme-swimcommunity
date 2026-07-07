@@ -17,6 +17,27 @@ body[class*="template-account-"],
   width: auto;
 }
 
+.brand-logo {
+  max-height: 48px;
+  width: auto;
+}
+
+.brand-logo-light {
+  display: inline-block;
+}
+
+.brand-logo-dark {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-light {
+  display: none;
+}
+
+[data-theme="dark"] .brand-logo-dark {
+  display: inline-block;
+}
+
 // Brand header - fixed at top
 .brand-header {
   position: sticky;
@@ -54,7 +75,7 @@ body[class*="template-account-"],
   align-items: center;
   gap: 0.45rem;
   padding: 0 0.5rem;
-  color: $gray-600;
+  color: var(--bs-body-color);
   font-size: 0.95rem;
   line-height: 1.2;
   text-decoration: none;
@@ -63,7 +84,7 @@ body[class*="template-account-"],
   &:hover,
   &:focus {
     text-decoration: none;
-    color: $gray-700;
+    color: rgba(var(--bs-link-color-rgb), var(--bs-link-opacity, 1));
   }
 
   strong {
@@ -73,12 +94,7 @@ body[class*="template-account-"],
 
   i {
     font-size: 0.9rem;
-    color: $gray-600;
-  }
-
-  &:hover,
-  &:focus {
-    color: $gray-700;
+    color: currentColor;
   }
 }
 
@@ -88,7 +104,7 @@ body[class*="template-account-"],
   min-height: 100%;
   padding-left: 0.35rem;
   margin-left: 0.15rem;
-  border-left: 1px solid rgba(37, 54, 69, 0.12);
+  border-left: 1px solid var(--bs-border-color);
 }
 
 .brand-header-widgets {
