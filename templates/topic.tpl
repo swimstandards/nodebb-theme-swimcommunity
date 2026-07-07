@@ -94,7 +94,7 @@
 						{{{ end }}}
 					</div>
 					<div class="d-flex d-none d-lg-block flex-grow-1 mt-2">
-						<div class="sticky-top" style="{{{ if config.theme.topicSidebarTools }}}top:2rem;{{{ else }}}top:6rem; {{{ end }}} z-index:1;">
+						<div class="sticky-top" style="{{{ if config.theme.topicSidebarTools }}}top:calc(var(--brand-header-offset, 0px) + 2rem);{{{ else }}}top:calc(var(--brand-header-offset, 0px) + 6rem); {{{ end }}} z-index:1;">
 							<div class="d-flex flex-column gap-3 align-items-end">
 								{{{ if config.theme.topicSidebarTools }}}
 								<div class="d-flex flex-column gap-2" style="width: 170px;">

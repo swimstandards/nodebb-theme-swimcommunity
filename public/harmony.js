@@ -99,7 +99,9 @@ $(document).ready(function () {
 						});
 						if (stickyTools && config.theme.topMobilebar && config.theme.autohideBottombar) {
 							stickyTools.css({
-								top: isHiding ? 0 : 'var(--panel-offset)',
+								top: isHiding ?
+									'var(--brand-header-offset)' :
+									'calc(var(--brand-header-offset) + var(--panel-offset))',
 							});
 						}
 					}

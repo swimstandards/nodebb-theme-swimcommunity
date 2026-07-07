@@ -98,12 +98,22 @@ body:not(.page-user) {
 .sticky-tools {
   position: sticky;
   z-index: 3;
-  top: 0;
+  top: var(--brand-header-offset, 0px);
   padding: 0.25rem 0;
 }
 // quartz doesn't need body-bg for tool background
 .skin-quartz .sticky-tools {
   background-color: initial;
+}
+
+.topic-toolbar-surface {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  border-color: var(--bs-border-color) !important;
+}
+
+.topic-toolbar-surface .btn {
+  color: inherit;
 }
 
 .flex-basis-md-200 {
