@@ -36,7 +36,6 @@
 					<div class="brand-back-link-wrap">
 				<a class="brand-back-link"
 					href="https://swimstandards.com">
-					<i class="fa fa-arrow-left" aria-hidden="true"></i>
 					<span>Back to <strong>Swim Standards</strong></span>
 				</a>
 					</div>
