@@ -8,6 +8,24 @@
 // Keep the NodeBB composer centered even when the page layout shifts
 // due to sidebar/header customizations in this theme.
 .composer {
+	@include media-breakpoint-down(lg) {
+		left: 0 !important;
+		right: 0 !important;
+		width: 100vw !important;
+		max-width: 100vw !important;
+		margin: 0 !important;
+		transform: none !important;
+
+		.composer-container,
+		.composer-body,
+		.write,
+		.resizable {
+			width: 100% !important;
+			max-width: 100% !important;
+			margin-right: 0 !important;
+		}
+	}
+
 	@include media-breakpoint-up(lg) {
 		left: 50% !important;
 		right: auto !important;
