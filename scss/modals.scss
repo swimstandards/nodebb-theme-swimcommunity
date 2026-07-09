@@ -4,3 +4,13 @@
 		right: $spacer * 4;
 	}
 }
+
+// Keep the NodeBB composer centered even when the page layout shifts
+// due to sidebar/header customizations in this theme.
+.composer {
+	@include media-breakpoint-up(lg) {
+		left: 50% !important;
+		right: auto !important;
+		transform: translateX(-50%);
+	}
+}
