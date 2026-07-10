@@ -1,8 +1,10 @@
+{{{ if widgets.header.length }}}
 <div data-widget-area="header">
 	{{{each widgets.header}}}
 	{{widgets.header.html}}
 	{{{end}}}
 </div>
+{{{ end }}}
 
 <div class="row register flex-fill">
 	<div

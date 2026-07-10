@@ -1,8 +1,10 @@
+{{{ if widgets.header.length }}}
 <div data-widget-area="header">
 	{{{each widgets.header}}}
 	{{widgets.header.html}}
 	{{{end}}}
 </div>
+{{{ end }}}
 <div class="groups list flex-fill">
 	<h3 class="fw-semibold">[[pages:groups]]</h3>
 	<div class="d-flex flex-wrap justify-content-between">

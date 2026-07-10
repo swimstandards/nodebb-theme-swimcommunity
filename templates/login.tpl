@@ -1,8 +1,10 @@
+{{{ if widgets.header.length }}}
 <div data-widget-area="header">
 	{{{each widgets.header}}}
 	{{widgets.header.html}}
 	{{{end}}}
 </div>
+{{{ end }}}
 
 <div class="container-lg px-3" style="max-width: 420px; margin: 0 auto;">
 	<h2 class="tracking-tight fw-semibold text-center mb-4">[[global:login]]</h2>
