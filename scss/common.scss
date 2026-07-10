@@ -200,3 +200,26 @@ body:not(.page-user) {
 [data-theme="dark"] .bg-white {
   background-color: var(--bs-body-bg) !important;
 }
+
+// The recent-cards plugin is swipeable on mobile. In this theme, without Persona's
+// old slideout gesture guard, real phones can leak horizontal swipes into browser
+// navigation/history gestures. Keep the gesture contained to the carousel.
+@include media-breakpoint-down(lg) {
+  .recent-cards-plugin,
+  .recent-cards-plugin .recent-cards,
+  .recent-cards-plugin .slick-list,
+  .recent-cards-plugin .slick-track {
+    overscroll-behavior-x: contain;
+  }
+
+  .recent-cards-plugin,
+  .recent-cards-plugin .recent-cards,
+  .recent-cards-plugin .slick-list {
+    touch-action: pan-y pinch-zoom;
+  }
+
+  .recent-cards-plugin .recent-card,
+  .recent-cards-plugin .recent-card a {
+    -webkit-user-drag: none;
+  }
+}
