@@ -1,6 +1,6 @@
 <div class="{{{ if config.theme.stickyToolbar }}}sticky-tools{{{ end }}} mb-3" style="top: {{{ if (config.theme.topMobilebar && !config.theme.autohideBottombar) }}}calc(var(--brand-header-offset, 0px) + var(--panel-offset)){{{ else }}}var(--brand-header-offset, 0px){{{ end }}};">
-	<nav class="topic-list-header d-flex flex-nowrap my-2 p-0 border-0 rounded">
-		<div class="topic-toolbar-surface d-flex flex-row p-2 gap-1 border rounded w-100">
+	<nav class="topic-list-header d-flex flex-nowrap mt-0 mb-2 p-0 border-0 rounded">
+		<div class="topic-toolbar-surface d-flex flex-row px-2 py-1 gap-1 border rounded w-100">
 			<div component="category/controls" class="d-flex me-auto mb-0 gap-2 flex-wrap">
 				{{{ if (template.category || template.world) }}}
 				<!-- IMPORT partials/category/watch.tpl -->
