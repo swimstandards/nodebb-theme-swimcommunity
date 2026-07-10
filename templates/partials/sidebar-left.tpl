@@ -1,5 +1,5 @@
-<nav component="sidebar/left" class="{{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark bg-light sidebar sidebar-left start-0 border-end vh-100 d-none d-lg-flex flex-column justify-content-between sticky-top">
-	<ul id="main-nav" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2 overflow-y-auto">
+<nav component="sidebar/left" class="{{{ if config.theme.openSidebars}}}open{{{ end }}} text-dark bg-light sidebar sidebar-left start-0 border-end d-none d-lg-flex flex-column justify-content-between sticky-top">
+	<ul id="main-nav" class="list-unstyled d-flex flex-column w-100 gap-2 mt-2">
 		{{{ each navigation }}}
 		{{{ if displayMenuItem(@root, @index) }}}
 		<li class="nav-item mx-2 {./class}{{{ if ./dropdown }}} dropend{{{ end }}}" title="{./title}">

@@ -119,6 +119,54 @@ body:not(.page-user) {
   color: inherit;
 }
 
+$alert-info-bg-light: rgba($primary, 0.12);
+$alert-info-border-light: rgba($primary, 0.34);
+$alert-success-accent: #1f8f6b;
+$alert-success-bg-light: rgba($alert-success-accent, 0.12);
+$alert-success-border-light: rgba($alert-success-accent, 0.34);
+$alert-warning-accent: #b7811f;
+$alert-warning-bg-light: rgba($alert-warning-accent, 0.14);
+$alert-warning-border-light: rgba($alert-warning-accent, 0.34);
+$alert-danger-accent: #b84d5f;
+$alert-danger-bg-light: rgba($alert-danger-accent, 0.12);
+$alert-danger-border-light: rgba($alert-danger-accent, 0.32);
+
+.alert {
+  margin-bottom: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: var(--bs-body-color);
+  background-color: rgba(var(--bs-emphasis-color-rgb), 0.04);
+  border: 1px solid var(--bs-border-color);
+  border-radius: $border-radius-sm;
+  box-shadow: var(--bs-box-shadow-sm);
+  line-height: 1.45;
+
+  a {
+    color: inherit;
+    text-decoration: underline;
+  }
+}
+
+.alert-info {
+  background-color: $alert-info-bg-light;
+  border-color: $alert-info-border-light;
+}
+
+.alert-success {
+  background-color: $alert-success-bg-light;
+  border-color: $alert-success-border-light;
+}
+
+.alert-warning {
+  background-color: $alert-warning-bg-light;
+  border-color: $alert-warning-border-light;
+}
+
+.alert-danger {
+  background-color: $alert-danger-bg-light;
+  border-color: $alert-danger-border-light;
+}
+
 .flex-basis-md-200 {
   @include media-breakpoint-up(md) {
     flex-basis: 200px !important;
@@ -175,6 +223,32 @@ body:not(.page-user) {
 }
 
 [data-theme="dark"] {
+  .alert {
+    color: rgba(255, 255, 255, 0.92);
+    background-color: rgba(var(--bs-emphasis-color-rgb), 0.08);
+    border-color: rgba(var(--bs-emphasis-color-rgb), 0.16);
+  }
+
+  .alert-info {
+    background-color: rgba($primary, 0.18);
+    border-color: rgba($primary, 0.42);
+  }
+
+  .alert-success {
+    background-color: rgba($alert-success-accent, 0.18);
+    border-color: rgba($alert-success-accent, 0.4);
+  }
+
+  .alert-warning {
+    background-color: rgba($alert-warning-accent, 0.2);
+    border-color: rgba($alert-warning-accent, 0.4);
+  }
+
+  .alert-danger {
+    background-color: rgba($alert-danger-accent, 0.18);
+    border-color: rgba($alert-danger-accent, 0.38);
+  }
+
   [component="chat/message/body"],
   [component="post/content"] {
     .table {

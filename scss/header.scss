@@ -339,9 +339,9 @@ body[class*="template-account-"],
 // Sidebar styling
 [component="sidebar/left"] {
   position: sticky;
-  top: var(--brand-header-offset, 0px);
+  top: calc(var(--brand-header-offset, 0px) + 0.5rem);
   z-index: 99;
-  margin-top: 0.5rem;
+  height: calc(100vh - var(--brand-header-offset, 0px) - 0.5rem);
   max-height: calc(100vh - var(--brand-header-offset, 0px) - 0.5rem);
   overflow-y: auto;
   flex-shrink: 0;
@@ -367,6 +367,16 @@ body.sidebar-hidden {
 
   @include media-breakpoint-down(lg) {
     gap: 0;
+  }
+}
+
+#panel {
+  min-height: calc(100vh - var(--brand-header-offset, 0px) - 0.5rem);
+}
+
+@include media-breakpoint-down(lg) {
+  #panel {
+    min-height: auto;
   }
 }
 
