@@ -371,7 +371,7 @@ body.sidebar-hidden {
 }
 
 #panel {
-  min-height: calc(100vh - var(--brand-header-offset, 0px) - 0.5rem);
+  min-height: calc(100vh - var(--brand-header-offset, 0px) - 1rem);
 }
 
 @include media-breakpoint-down(lg) {

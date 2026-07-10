@@ -6,7 +6,7 @@
 </div>
 {{{ end }}}
 <div class="groups list flex-fill">
-	<h3 class="fw-semibold">[[pages:groups]]</h3>
+	<h3 class="fs-4 fw-semibold">[[pages:groups]]</h3>
 	<div class="d-flex flex-wrap justify-content-between">
 		<div class="mb-2 mb-md-0">
 			<div class="text-sm d-flex flex-wrap align-items-center gap-2">
