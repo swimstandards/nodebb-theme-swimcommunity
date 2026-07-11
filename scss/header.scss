@@ -1,8 +1,11 @@
-// hide the full brand header on templates that render their own top cover/header
+// Account and group detail pages render their own page nav, so hide the global left sidebar.
 body[class*="template-account-"],
 .template-groups-details {
-  .brand-header,
   [component="sidebar/left"] {
+    display: none !important;
+  }
+
+  .sidebar-toggle-btn {
     display: none !important;
   }
 }

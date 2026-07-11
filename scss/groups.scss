@@ -20,3 +20,17 @@
 		margin-top: 300px;
 	}
 }
+
+.group-status-badge {
+	color: var(--bs-body-color);
+	background-color: rgba(var(--bs-emphasis-color-rgb), 0.06);
+	border-color: var(--bs-border-color) !important;
+	font-weight: 600;
+	letter-spacing: 0;
+}
+
+[data-theme="dark"] .group-status-badge {
+	color: rgba(255, 255, 255, 0.92);
+	background-color: rgba(255, 255, 255, 0.12);
+	border-color: rgba(255, 255, 255, 0.28) !important;
+}

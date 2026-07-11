@@ -6,7 +6,7 @@
 	position: absolute;
 	background-origin: content-box;
 	width: 100%;
-	top: var(--panel-offset)!important;
+	top: calc(var(--brand-header-offset, 0px) + var(--panel-offset, 0px))!important;
 	left: auto;
 	right: 0px;
 
