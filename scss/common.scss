@@ -223,6 +223,18 @@ $alert-danger-border-light: rgba($alert-danger-accent, 0.32);
 }
 
 [data-theme="dark"] {
+  .tooltip {
+    --bs-tooltip-color: rgba(255, 255, 255, 0.94);
+    --bs-tooltip-bg: #111827;
+    --bs-tooltip-opacity: 1;
+  }
+
+  .tooltip-inner {
+    color: rgba(255, 255, 255, 0.94);
+    background-color: #111827;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+
   .alert {
     color: rgba(255, 255, 255, 0.92);
     background-color: rgba(var(--bs-emphasis-color-rgb), 0.08);
