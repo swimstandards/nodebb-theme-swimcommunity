@@ -30,6 +30,12 @@ ul.topics-list, ul.categories-list {
 	}
 }
 
+ul.categories-list {
+	> li:first-child {
+		padding-top: 0 !important;
+	}
+}
+
 // on default skin use primary color for unread titles
 .skin-noskin {
 	ul.topics-list, ul.categories-list {
