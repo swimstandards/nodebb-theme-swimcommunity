@@ -12,6 +12,7 @@ $(document).ready(function () {
 	fixSidebarOverflow();
 	setupSidebarToggle();
 	setupStickyOffsets();
+	setupComposeDiscard();
 
 	function setupSkinSwitcher() {
 		$('[component="skinSwitcher"]').on('click', '.dropdown-item', function () {
@@ -336,6 +337,62 @@ $(document).ready(function () {
 		if (headerEl && window.ResizeObserver) {
 			const resizeObserver = new ResizeObserver(updateStickyOffset);
 			resizeObserver.observe(headerEl);
+		}
+	}
+
+	function setupComposeDiscard() {
+		if (!ajaxify.data.template.compose || hasInternalReferrer()) {
+			return;
+		}
+
+		require(['composer', 'hooks', 'modals'], function (composer, hooks, modals) {
+			hooks.on('action:composer.enhanced', function ({ postContainer, postData }) {
+				const discardButton = postContainer.find('.composer-discard').get(0);
+				if (!discardButton) {
+					return;
+				}
+
+				discardButton.addEventListener('click', function (event) {
+					event.preventDefault();
+					event.stopImmediatePropagation();
+
+					const postUuid = postContainer.attr('data-uuid');
+					const discardAndReturnHome = function () {
+						composer.discard(postUuid);
+						window.location.assign(`${config.relative_path || ''}/`);
+					};
+
+					if (!postData.modified) {
+						discardAndReturnHome();
+						return;
+					}
+
+					const button = $(discardButton).prop('disabled', true);
+					modals.confirm('[[modules:composer.discard]]', function (confirmed) {
+						if (confirmed) {
+							discardAndReturnHome();
+						}
+						button.prop('disabled', false);
+					});
+				}, true);
+			});
+		});
+
+		function hasInternalReferrer() {
+			if (!document.referrer) {
+				return false;
+			}
+
+			try {
+				const referrer = new URL(document.referrer);
+				const relativePath = config.relative_path || '';
+				const isCommunityPath = !relativePath ||
+					referrer.pathname === relativePath ||
+					referrer.pathname.startsWith(`${relativePath}/`);
+				return referrer.origin === window.location.origin && isCommunityPath;
+			} catch (error) {
+				return false;
+			}
 		}
 	}
 });
